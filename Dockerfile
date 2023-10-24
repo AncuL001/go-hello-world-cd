@@ -20,7 +20,7 @@ FROM debian:bookworm
 RUN apt update
 RUN apt install g++ --quiet --yes
 
-# Copies binary from compile stage to build stage
+# Copies binary from compile stage to final stage
 WORKDIR /
 COPY --from=build-env /server /
 
