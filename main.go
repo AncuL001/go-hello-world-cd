@@ -40,6 +40,7 @@ func RunServer(engine *gin.Engine) *gin.Engine {
     version := engine.Group("/api")
     {
         version.GET("/hello", HelloAPIHandler.Hello)
+        version.GET("/secret", HelloAPIHandler.Secret)
     }
 
     return engine
